@@ -16,3 +16,4 @@ const sum = (num) => {
 }
 
 export default sum
+
