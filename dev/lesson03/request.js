@@ -2,11 +2,11 @@ const rp = require('request-promise-native')
 const log4js = require('log4js')
 log4js.configure({
     appenders: {
-        console: { type: 'console' }
+        console: {type: 'console'}
     },
     categories: {
-        ping: { appenders: ['console'], level: 'info' },
-        default: { appenders: ['console'], level: 'info' }
+        ping: {appenders: ['console'], level: 'info'},
+        default: {appenders: ['console'], level: 'info'}
     }
 });
 const logger = log4js.getLogger('ping')
@@ -58,15 +58,13 @@ async function testServer() {
 }
 
 
-
 if (argv.t === "par") {
     Promise.all(
         new Array(argv.n).fill(0).map(() => testServer())
     )
-}
-else {
+} else {
     (async testSequently => {
-        for (i = 0; i < argv.n; i++){
+        for (i = 0; i < argv.n; i++) {
             await testServer()
         }
     })()
