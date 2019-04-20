@@ -58,11 +58,7 @@ const testSequently = async () => {
     }
 }
 
-if (argv.t === 'par') {
-    Promise.all(
-        new Array(argv.n).fill(0).map(() => testServer())
-    )
-} else {
-    testSequently()
-}
+const testInParallel = () => Promise.all(new Array(argv.n).fill(0).map(() => testServer()))
+
+argv.t === 'par' ? testInParallel() : testSequently()
 
