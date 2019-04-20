@@ -1,0 +1,26 @@
+{
+  "name": "node-1",
+  "version": "1.0.0",
+  "description": "Homework 3 for Otus Modern JavaScript Framework course",
+  "main": "request.js",
+  "scripts": {
+    "test": "node request.js",
+    "start": "node server.js"
+  },
+  "author": "Sergey Borisov",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/openself/borisov-sergey-otus-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/openself/borisov-sergey-otus-js/issues"
+  },
+  "homepage": "https://github.com/openself/borisov-sergey-otus-js",
+  "devDependencies": {
+    "log4js": "^4.1.0",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.7",
+    "yargs": "^13.2.2"
+  }
+}
