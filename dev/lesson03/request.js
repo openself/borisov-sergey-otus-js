@@ -32,12 +32,7 @@ const argv = require('yargs')
             choices: ['seq', 'par']
         }
     })
-    .check(argv1 = argv => {
-        if (!argv.n > 0) {
-            throw new Error('Error: the "n" option value must be a number >= 1')
-        }
-        return true
-    })
+    .check(argv1 = argv => argv.n > 0 ? true : new Error('Error: the "n" option value must be >= 1'))
     .help('h')
     .alias('h', 'help')
     .argv;
@@ -57,16 +52,17 @@ async function testServer() {
     }
 }
 
+const testSequently = async () => {
+    for (i = 0; i < argv.n; i++) {
+        await testServer()
+    }
+}
 
-if (argv.t === "par") {
+if (argv.t === 'par') {
     Promise.all(
         new Array(argv.n).fill(0).map(() => testServer())
     )
 } else {
-    (async testSequently => {
-        for (i = 0; i < argv.n; i++) {
-            await testServer()
-        }
-    })()
+    testSequently()
 }
 
