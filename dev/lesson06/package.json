@@ -1,0 +1,16 @@
+{
+  "name": "node-3",
+  "version": "1.0.0",
+  "description": "Homework for lesson 6 in the OTUS JS course",
+  "main": "tree.js",
+  "scripts": {
+    "test": "node tree -- test/foo",
+    "tree": "node tree --"
+  },
+  "author": "Sergey Borisov",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "klaw": "^3.0.0"
+  }
+}
