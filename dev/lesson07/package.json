@@ -5,5 +5,8 @@
   "main": "index.js",
   "author": "Sergey Borisov",
   "license": "ISC",
-  "private": true
+  "private": true,
+  "scripts": {
+    "stream": "node index.js"
+  }
 }
