@@ -19,8 +19,6 @@ klaw(baseDir)
         const name = path.normalize(path.join(lastDir, item.path.substr(baseLen)))
         item.stats.isDirectory() ? dirs.push(name) : files.push(name)
     })
-    .on('error', (err) => {
-        console.log(err.message)
-    })
+    .on('error', err => console.log(err.message))
     .on('end', () => console.log(JSON.stringify({'files': files, 'dirs': dirs}, null, 4)))
 
