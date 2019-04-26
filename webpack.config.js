@@ -2,7 +2,7 @@
 const path = require('path')
 
 const conf = {
-    entry: './dev/lesson06/tree.js',
+    entry: './dev/lesson07/index.js',
     
     output: {
         path: path.resolve(__dirname, './js'),

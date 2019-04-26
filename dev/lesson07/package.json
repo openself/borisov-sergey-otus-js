@@ -1,0 +1,9 @@
+{
+  "name": "node-4",
+  "version": "1.0.0",
+  "description": "Homework for lesson 7 in the OTUS JS course",
+  "main": "index.js",
+  "author": "Sergey Borisov",
+  "license": "ISC",
+  "private": true
+}
