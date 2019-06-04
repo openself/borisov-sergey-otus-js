@@ -2,12 +2,12 @@
 const path = require('path')
 
 const conf = {
-    entry: './dev/lesson07/index.js',
-    
+    entry: './dev/lesson10/server.js',
+
     output: {
-        path: path.resolve(__dirname, './js'),
-        filename: 'main.js',
-        publicPath: 'js/'
+        path: path.resolve(__dirname, './app'),
+        filename: 'server.js',
+        publicPath: 'app/'
     },
     devServer: {
         overlay: true
@@ -17,7 +17,7 @@ const conf = {
             {
                 test: /\.js$/,
                 loader: 'babel-loader',
-                // exclude: '/node_modules/'
+                exclude: '/node_modules/'
             }
         ]
     }
