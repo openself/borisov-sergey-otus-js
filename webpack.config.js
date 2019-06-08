@@ -2,12 +2,12 @@
 const path = require('path')
 
 const conf = {
-    entry: './dev/lesson10/server.js',
+    entry: './dev/lesson12/index.js',
 
     output: {
-        path: path.resolve(__dirname, './app'),
-        filename: 'server.js',
-        publicPath: 'app/'
+        path: path.resolve(__dirname, './js'),
+        filename: 'main.js',
+        publicPath: 'js/'
     },
     devServer: {
         overlay: true
